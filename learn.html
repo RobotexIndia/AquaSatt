@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More - Aqua Satt</title>
+    <link rel="icon" href="f.webp">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #0077b6;
+}
+
+.navbar .logo {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar ul li a.active {
+    background-color: #005f8c;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #0096c7, #00b4d8);
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+.content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.content section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-size: 1.8rem;
+    color: #0077b6;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #00b4d8;
+    padding-bottom: 0.5rem;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.content ul li {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Join Us Section */
+.join-us {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #0077b6;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005f8c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0077b6;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+</style>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Aqua Satt</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn-more.html" class="active">Learn More</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Learn More About Aqua Satt</h1>
+        <p>Your gateway to understanding sustainable water technology and conservation.</p>
+    </section>
+
+    <!-- Content Section -->
+    <main class="content">
+        <section class="about">
+            <h2>About Aqua Satt</h2>
+            <p>Aqua Satt is committed to ensuring clean, sustainable water resources for communities worldwide. Our technology focuses on water purification, conservation, and innovative solutions to combat water scarcity.</p>
+        </section>
+
+        <section class="solutions">
+            <h2>Our Solutions</h2>
+            <p>We provide advanced filtration systems, smart water management tools, and community-focused programs designed to enhance water quality and accessibility.</p>
+            <ul>
+                <li>Advanced Water Filtration</li>
+                <li>Smart Water Management</li>
+                <li>Community Education Programs</li>
+            </ul>
+        </section>
+
+        <section class="initiatives">
+            <h2>Current Initiatives</h2>
+            <p>Learn more about our projects and initiatives designed to improve water sustainability around the globe:</p>
+            <ul>
+                <li>Project Blue Earth: Providing clean water solutions in rural areas.</li>
+                <li>Green Drops Initiative: Educating communities on water conservation.</li>
+                <li>Urban Clean-Up: Promoting cleaner waterways in metropolitan areas.</li>
+            </ul>
+        </section>
+
+        <section class="join-us">
+            <h2>Join Our Efforts</h2>
+            <p>Get involved in our mission! Partner with us or contribute to ongoing projects to make a positive impact on water sustainability.</p>
+            <button class="cta-button" onclick="location.href='web.html'">Contact Us</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Aqua Satt. All rights reserved.</p>
+    </footer>
+</body>
+</html>

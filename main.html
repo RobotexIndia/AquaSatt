@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua Satt - Water Usage</title>
+    <link rel="icon" href="f.webp">
+    <style>
+        body {
+            background-image: url('WaterConservation-1024x647-blog-5.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .content {
+            text-align: center;
+            font-weight: bold;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 90%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+        .content div {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+        .content div:nth-child(1),
+        .content div:nth-child(2) {
+            color: green;
+        }
+        /* Button Styling */
+        .btn {
+            margin: 20px auto;
+            padding: 10px 30px;
+            color: white;
+            background-color: blue;
+            border-radius: 18px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .content div {
+                font-size: 1.4em;
+            }
+            .btn {
+                padding: 8px 20px;
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .content div {
+                font-size: 1.2em;
+            }
+            .btn {
+                padding: 6px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="waterRequirement">The Requirement Of Water Per Day: </div>
+        <div id="waterUsage">Usage of Water Per Day: </div>
+        <button class="btn" onclick="location.href='usage.html'">&#8594;</button>
+    </div>
+
+    <script>
+        // Fetch data from local storage
+        const adults = parseInt(localStorage.getItem('adults'));
+        const children = parseInt(localStorage.getItem('children'));
+
+        // Assuming adults need 150 liters and children 100 liters per day
+        const adultWaterRequirement = adults * 25;
+        const childWaterRequirement = children * 20;
+        const totalWaterRequirement = adultWaterRequirement + childWaterRequirement;
+
+        // Display water requirements and usage
+        document.getElementById('waterRequirement').textContent = 
+            `The Requirement Of Water Per Day: ${totalWaterRequirement} Liters`;
+
+        document.getElementById('waterUsage').textContent = 
+            `Usage of Water Per Day: ${totalWaterRequirement * 2.1} Liters`; // Assuming usage is 10% more than requirement
+    </script>
+</body>
+</html>
+

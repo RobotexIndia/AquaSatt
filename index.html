@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - Aqua Satt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="f.webp">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Aqua Satt</h1>
+            <h2>Login</h2>
+            <form >
+                
+                <div class="input-group">
+                    
+                    <input type="email" name="email" required="required">
+                    <label>Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" required="required">
+                    <label>Password</label>
+                </div>
+                <button type="button" id="loginButton">Login</button>
+
+                
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("loginButton").addEventListener("click", function() {
+      window.location.href = "next.html";
+    });
+  </script>
+  
+</html>

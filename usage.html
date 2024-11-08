@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Usage Chart</title>
+    <link rel="icon" href="f.webp">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e0f7fa;
+            color: #004d40;
+            background-image: url('bg.webp'); /* Replace with actual path */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Container for the chart */
+        .chart-container {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Title styling */
+        .chart-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        /* Styling for each bar */
+        .bar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .bar-label {
+            flex-basis: 30%;
+            font-size: 1em;
+        }
+
+        .bar-content {
+            flex-basis: 70%;
+            background-color: #b2dfdb;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background-color: #00796b;
+            text-align: right;
+            padding-right: 10px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px 0 0 5px;
+        }
+
+        /* Specific widths based on water usage in liters */
+        .bathroom .bar-fill {
+            width: 70%; /* Example width for 70 liters */
+        }
+
+        .kitchen .bar-fill {
+            width: 30%; /* Example width for 30 liters */
+        }
+
+        .garden .bar-fill {
+            width: 50%; /* Example width for 50 liters */
+        }
+
+        /* Button Styling */
+        .action-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .action-button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div class="chart-title">Water Usage by Area</div>
+
+        <!-- Bathroom Bar -->
+        <div class="bar bathroom">
+            <div class="bar-label">Bathroom</div>
+            <div class="bar-content">
+                <div class="bar-fill">70 L</div>
+            </div>
+        </div>
+
+        <!-- Kitchen Bar -->
+        <div class="bar kitchen">
+            <div class="bar-label">Kitchen</div>
+            <div class="bar-content">
+                <div class="bar-fill">30 L</div>
+            </div>
+        </div>
+
+        <!-- Garden Bar -->
+        <div class="bar garden">
+            <div class="bar-label">Garden</div>
+            <div class="bar-content">
+                <div class="bar-fill">50 L</div>
+            </div>
+        </div>
+
+        <!-- Action Button -->
+        <button class="action-button" onclick="location.href='aquaman.html'">Learn More</button>
+    </div>
+</body>
+</html>

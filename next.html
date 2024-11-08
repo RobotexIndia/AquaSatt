@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Members - Aqua Satt</title>
+    <link rel="icon" href="f.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #00c6ff, #0072ff);
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #0072ff;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        p.error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Family Details</h1>
+        <form id="familyForm">
+            <div class="input-group">
+                <label for="totalMembers">Total Family Members:</label>
+                <input type="number" id="totalMembers" name="totalMembers" min="1" required>
+            </div>
+            <div class="input-group">
+                <label for="adults">Number of Adults:</label>
+                <input type="number" id="adults" name="adults" min="0" required>
+            </div>
+            <div class="input-group">
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" min="0" required>
+            </div>
+            <p class="error" id="errorMessage"></p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const familyForm = document.getElementById('familyForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        familyForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const totalMembers = parseInt(document.getElementById('totalMembers').value);
+            const adults = parseInt(document.getElementById('adults').value);
+            const children = parseInt(document.getElementById('children').value);
+
+            if (adults + children !== totalMembers) {
+                errorMessage.textContent = "The number of adults and children must equal the total family members.";
+            } else {
+                errorMessage.textContent = '';
+                localStorage.setItem('totalMembers', totalMembers);
+                localStorage.setItem('adults', adults);
+                localStorage.setItem('children', children);
+                window.location.href = 'main.html';
+            }
+        });
+    </script>
+</body>
+</html>
